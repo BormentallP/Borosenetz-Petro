@@ -1,0 +1,80 @@
+@mixin quickSandFont {
+  font-family: 'Quicksand', sans-serif;
+}
+@mixin robotoFont {
+  font-family: 'Roboto', sans-serif;
+}
+@mixin hoverColor {
+  color: #5E81FE ;
+}
+@mixin fillColor {
+  fill: #5E81FE ;
+}
+@mixin buttonFontColor {
+  color:#3A79FF;
+}
+@mixin headerColor{
+  color:#3D4F9F;
+}
+@mixin textColor {
+  color: #8D96BD;
+}
+@mixin borderColor {
+  color:#D8E3FE;
+}
+@mixin backgrondColor {
+  background-color: #F5F8FF;
+}
+@mixin smallHeader {
+  @include robotoFont();
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  color:#3D4F9F;
+  margin: 3em 0 1em 0;
+}
+@mixin bigHeader {
+  @include quickSandFont();
+  font-weight:400;
+  font-size: 2em;
+  line-height:60px;
+  margin-bottom: 1em;
+  @include headerColor();
+}
+@mixin text {
+  max-width: 50%;
+  line-height: 29px;
+  letter-spacing: .03em;
+  margin: 0 auto 40px auto;
+  @include textColor;
+  @include robotoFont();
+}
+@mixin button {
+
+        width: 113px;
+      height: 43px;
+      background: #D2E1FF;
+      border: 0px;
+       border-radius: 2px;
+      cursor: pointer;
+
+      @include quickSandFont();
+      font-size: 13px;
+      font-weight: 700;
+       letter-spacing: 0em;
+       @include buttonFontColor();
+}
+@mixin iconsBackColor {
+  background: #F1F5FF;
+  width: 5em;
+  height: 5em;
+  border-radius:50%;
+
+}
+@mixin pseudoLine {
+ content:'';
+  width: 15px;
+  height: 1px;
+  background-color:#DAE4FE;
+  display: inline-block;
+}
