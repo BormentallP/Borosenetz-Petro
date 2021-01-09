@@ -32,6 +32,7 @@
   font-weight: 500;
   color:#3D4F9F;
   margin: 3em 0 1em 0;
+  letter-spacing: .1em;
 }
 @mixin bigHeader {
   @include quickSandFont();
@@ -77,4 +78,21 @@
   height: 1px;
   background-color:#DAE4FE;
   display: inline-block;
+}
+@mixin startButtons{
+  color: #FFFFFF;
+          width: 155px;
+          height: 43px;
+          border: 1px solid #A0B4FF;
+          border-radius: 2px;
+}
+@mixin fontButtons{
+  @include quickSandFont();
+font-size: 13px;
+ font-weight: 500;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: center;
+color:#C7D3FF;
+
 }
