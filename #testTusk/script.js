@@ -2,7 +2,6 @@ var rowValue = document.getElementById('row').value;
 
 var columnValue = document.getElementById('column').value;
 
-console.log(rowValue);
 const container = document.getElementById('container');
 
 function makeRows(rows, cols) {
@@ -12,7 +11,13 @@ function makeRows(rows, cols) {
     let cell = document.createElement('div');
     cell.innerText = Math.floor(Math.random() * 1000);
     container.appendChild(cell).className = 'grid-item';
+
+    let newArray = [makeRows[c]];
+    newArray.forEach(function () {
+      console.log(newArray[c]);
+    });
+
+    console.log();
   }
 }
-
 makeRows(rowValue, columnValue);
