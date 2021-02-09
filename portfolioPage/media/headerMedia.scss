@@ -1,0 +1,94 @@
+@media(max-width:750px){
+
+  .header__menu{
+   height: 8em;
+    top: -150px;
+
+ }
+ .header__menu.active{
+   top: 0;
+ }
+ .header__list{
+   flex-direction: column;
+   display: block;
+ }
+
+ .header__link {
+   margin: 1em 0;
+ }
+  .header__burger{
+   display: block;
+   position: relative;
+   width: 30px;
+   height: 20px;
+   top: 3em;
+   left: 100%  ;
+   transition: .3s;
+   span{
+     height: 2px;
+     position: absolute;
+     background-color:black;
+     width: 100%;
+     top:9px;
+     transition: .3s;
+   }
+ &::before,
+ &::after{
+   content:'';
+   position: absolute;
+   background-color:black;
+   width: 100%;
+   height: 2px;
+   left: 0;
+   transition: .3s;
+ }
+ &::before{
+   top: 0;
+ }
+ &::after{
+   bottom: 0;
+ }
+
+ }
+ .header__burger.active::before{
+   transform: rotate(45deg);
+   top: 9px;
+   width: 50%;
+ }
+ .header__burger.active::after{
+   transform: rotate(-45deg);
+   bottom: 9px;
+   width: 50%;
+ }
+ .header__burger.active span{
+   transform: scale(0);
+ }
+ .header__menu::after{
+   display: none;
+ }
+.name{position: relative; z-index: 100;top: -50%;left: -30%;}
+.profecional{position: relative; top: -50%;z-index: 100;}
+.face__img {position: relative; z-index: 50;}
+.leng.active{z-index: 50; right:5%; position: fixed; }
+
+
+.name.schow, .profecional.schow, .face__img.schow{
+  z-index: 0;
+}
+.face__info{
+  position:relative;
+  top:-5em;
+}
+.face .container .face__img-desctop {
+  background: url(img/mainPhoto.png), no-repeat  !important;
+  background-position:center !important;
+  height: 450px!important;
+  width: 300px!important;
+
+}
+}
+@media(max-width:475px){
+  .face__info{
+   flex-direction: column;
+  }
+};
