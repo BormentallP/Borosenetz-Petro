@@ -109,6 +109,11 @@
     height: 450px !important;
     width: 300px !important;
   }
+
+  .skills__outer {
+    grid-template-columns: repeat(1, auto) !important;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 475px) {
   .face__info {
@@ -140,6 +145,9 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 10em;
+}
+.wraper .header .container .header__burger {
+  cursor: pointer;
 }
 .wraper .header .container .header__menu {
   position: relative;
@@ -248,10 +256,9 @@ body {
   margin: 3em 0;
 }
 .skills .container .skills__outer {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
 }
 .skills .container .skills__outer .skills__icon {
   display: flex;
@@ -260,8 +267,9 @@ body {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  margin: 3% auto;
 }
-.skills .container .skills__outer .skills__icon .icon .icon img {
+.skills .container .skills__outer .skills__icon .icon {
   margin: 0 auto;
 }
 .skills .container .skills__outer .skills__icon .icon-header {
@@ -283,4 +291,65 @@ body {
 }
 .skills .container .skills__outer .skills__icon .rating__icons:hover, .skills .container .skills__outer .skills__icon .rating__icons:hover ~ .rating__icons {
   color: black;
+}
+
+.portfolio {
+  background-color: #F6F6F6;
+}
+.portfolio .container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.portfolio .container .portfolio__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio .container .portfolio__list .portfolio__header {
+  font-weight: 600;
+  font-size: 4em;
+  padding-top: 1em;
+}
+.portfolio .container .portfolio__list .potfolio-pages {
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+.portfolio .container .portfolio__list .potfolio-pages:hover {
+  text-decoration: underline;
+}
+.portfolio .container .portfolio__list .potfolio-pages:active {
+  border: black solid 1px;
+}
+.portfolio .container .portfolio__list .potfolio-pages:focus {
+  border: black solid 1px;
+}
+
+.contacs .container {
+  text-align: center;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.contacs .container .contacs__list .header {
+  font-weight: 600;
+  font-size: 4em;
+  padding-top: 1em;
+}
+.contacs .container .contacs__list .what {
+  line-height: 17px;
+}
+.contacs .container .contacs__list .button-send {
+  color: white;
+  width: 180.5px;
+  height: 42px;
+  background-color: black;
+  border-radius: 1%;
+}
+.contacs .container .contacs__list .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contacs .container .contacs__list .icons .contacs-icons {
+  margin: 2em 1em;
 }
