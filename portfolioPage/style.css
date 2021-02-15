@@ -339,16 +339,29 @@ body {
   line-height: 17px;
 }
 .contacs .container .contacs__list .button-send {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   color: white;
-  width: 180.5px;
-  height: 42px;
+  width: 180px;
+  height: 60px;
   background-color: black;
-  border-radius: 1%;
+  border-radius: 40px;
+  margin: 2em 1em;
+  cursor: pointer;
+}
+.contacs .container .contacs__list .button-send:active {
+  width: 190px;
+  height: 70px;
+}
+.contacs .container .contacs__list .button-send:focus {
+  width: 180px;
+  height: 60px;
 }
 .contacs .container .contacs__list .icons {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .contacs .container .contacs__list .icons .contacs-icons {
   margin: 2em 1em;
