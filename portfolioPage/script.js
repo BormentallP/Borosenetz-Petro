@@ -13,3 +13,4 @@ ratingItemsArray.forEach((item) =>
     item.parentNode.dataset.totalValue = itemValue;
   })
 );
+ratingItemsArray();
