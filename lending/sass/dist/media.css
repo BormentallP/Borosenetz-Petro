@@ -1,0 +1,40 @@
+@media screen and (max-width: 992px) {
+  .header__profile {
+    display: none !important;
+  }
+
+  .hamburger-menu {
+    display: block !important;
+  }
+
+  .wraper {
+    position: relative;
+  }
+  .wraper .header__button {
+    right: 85px !important;
+    top: 85px !important;
+  }
+  .wraper .add {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 1em !important;
+  }
+  .wraper .main {
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .wraper .main .info {
+    flex-basis: 100% !important;
+    justify-content: space-around !important;
+  }
+  .wraper .main .info__regime .container {
+    margin: 0 auto;
+    width: 50%;
+  }
+  .wraper .main .user {
+    margin: 0 auto;
+  }
+  .wraper .main .info__regime {
+    margin: 2em auto 2em auto;
+  }
+}

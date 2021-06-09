@@ -2,16 +2,16 @@
 
 @import"sass/mixins.scss";
 @import"sass/media.scss";
+@import "sass/main.scss";
   .wraper {
     @include fontColor() ;
     min-width: 400px;
     max-width: 1440px;
     margin: 0 auto;
     position: relative;
-    height: 1000vh;
+    height: 1100px;
      .header {
-      @import "sass/main.scss";
-      display: flex;
+       display: flex;
       flex-basis: 50%;
       justify-content: space-between;
       padding: 1.5em 7.3em 0 7.3em  ;
