@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+
+@import"sass/mixins.scss";
+@import"sass/media.scss";
+  .wraper {
+    @include fontColor() ;
+    min-width: 400px;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    height: 1000vh;
+     .header {
+      @import "sass/main.scss";
+      display: flex;
+      flex-basis: 50%;
+      justify-content: space-between;
+      padding: 1.5em 7.3em 0 7.3em  ;
+      box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+      flex-wrap: wrap;
+      &__main {
+        .logo {
+        }
+        &__navigation {
+          display: flex;
+          .active{
+            border-bottom: 4px solid transparent;
+            -moz-border-image: -moz-linear-gradient(left, #FF974F 0%, #E32C75 100%);
+            -webkit-border-image: -webkit-linear-gradient(left, #FF974F 0%, #E32C75 100%);
+              border-image: linear-gradient(to right, #FF974F 0%, #E32C75 100%);
+               border-image-slice: 1;
+          }
+        }
+        .element {
+           @include OpenSansFont;
+          font-weight: 400;
+          font-style: normal;
+          padding-top: 1.4em;
+          padding-bottom: 1em;
+          &:not(:first-child) {
+            margin-left: 2em;
+          }
+        }
+      }
+      &__profile {
+        &__menu {
+          display: flex;
+        }
+        .ovner-window {
+          display: flex;
+          align-items: center;
+          @include OpenSansFont;
+          font-weight: 400;
+          .item {
+            &:not(:last-child) {
+              margin-right: 1em;
+            }
+            &:hover{
+              cursor:pointer;
+            }
+
+          }
+        }
+        .ovner-optiones {
+          display: flex;
+          align-items: center;
+          margin-right:2em;
+         .item {
+          &:not(:last-child) {
+            margin-right: .5em;
+          }
+          &:hover{
+            cursor:pointer;
+          }
+          &:first-child{
+            margin-left: 2em;
+          }
+          }
+        }
+      }
+  .header__button {
+    display: flex;
+    justify-content: flex-end;
+     position: absolute;
+    right: 150px;
+    top: 85px;
+    .add{
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #FF974F 0%, #E32C75 100%);
+      border-radius: 50%;
+       font-size: 2em;
+      color: #ffff;
+      margin-right: 0px;
+      &:hover {}
+      &:active {}
+      &:focus {}
+    }
+  }
+    }
+  }
+

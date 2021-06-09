@@ -1,0 +1,10 @@
+@import"burger.css";
+@mixin OpenSansFont {
+  font-family: 'Open Sans', sans-serif;
+}
+@mixin Montserrat{
+  font-family: 'Montserrat',sans-serif;
+}
+@mixin fontColor {
+  color: #3E4056 !important;
+}

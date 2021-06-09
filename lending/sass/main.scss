@@ -1,0 +1,269 @@
+@import"mixins.scss";
+.main {
+  display: flex;
+  padding: 4.5em 7.3em 0 7.3em  ;
+  background-color:#F2F2F2;
+  .user {
+    flex-basis: 30%;
+    &__info {
+      display: flex;
+      .avatar img{
+        display: inline;
+      }
+      .user__info-general {
+        margin-left: 1.5rem;
+        .name {
+         @include Montserrat();
+         font-size: 24px;
+          font-weight: 600;
+          line-height: 26px;
+        }
+      }
+      .menu {
+        display: flex;
+        height: min-content;
+        margin-right: 1.5em;
+        position: relative;
+        .dots {
+          &:after {
+            content: '\2807';
+            font-size: 25px;
+            }
+        }
+        &:hover {}
+        &:active {}
+        &:focus {}
+      }
+      .mail {
+        @include OpenSansFont();
+        font-size: 16px;
+        letter-spacing: -0.5px;
+
+      }
+      .edit {
+        @include OpenSansFont();
+        font-size: 16px;
+        color:  #F05D63;
+        margin-top: 1em;
+        &:hover{
+          text-decoration: underline;
+        }
+        img{
+          display: inline;
+        }
+        a {
+          &:hover {}
+          &:active {}
+          &:focus {}
+        }
+      }
+
+    }
+    &__contacs {
+      display: flex;
+
+      .user__contacs-number {
+        @include OpenSansFont();
+        &:not(:first-child) {
+          margin-left: 3.3em;
+        }
+
+      }
+      h5 {
+       @include OpenSansFont();
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+        margin-top: 2em;
+      }
+    }
+    &__description {
+      margin-top: 2em;
+      .text {
+       @include OpenSansFont();
+        font-size: 16px;
+        font-weight: 400;
+
+      }
+    }
+  }
+  .info {
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    &__regime{
+      display: block;
+      width: 100%;
+      margin-left: 4.5em;
+      margin-bottom: 2em;
+      @include OpenSansFont();
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+  }
+    }
+    .checkbox {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      margin: 10px 0 0 20px;
+
+
+    }
+
+    .checkbox + label {
+      position: relative;
+      padding: 0 0 0 60px;
+      cursor: pointer;
+
+    }
+    .checkbox + label:before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 50px;
+      height: 26px;
+      border-radius: 13px;
+      background: #CDD1DA;
+      transition: .2s;
+    }
+    .checkbox + label:after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 2px;
+      width: 22px;
+      height: 22px;
+      border-radius: 10px;
+      background: #FFF;
+      transition: .2s;
+    }
+    .checkbox:checked + label:before {
+      background: #ED5267;
+
+    }
+    .checkbox:checked + label:after {
+      left: 26px;
+    }
+.info__article {
+  max-width: 380px;
+  flex: 2 1 347px;
+ background-color:#ffff;
+ border-radius: 8px;
+ box-shadow: 0px 24px 24px 0px #0000001F;
+  margin-left: 2em;
+  margin-top: 2em;
+  padding-left: 20px;
+  padding-top:2em ;
+  padding-right: 1.5em;
+
+
+
+
+  .additional-header {
+
+   @include OpenSansFont();
+   font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 21px;
+    span{
+      background: #ECF1F8;
+      border-radius: 6px;
+    }
+  }
+  &-header{
+   @include Montserrat();
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+
+  }
+  .footer {
+    display: flex;
+    flex: 0 0 auto;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3.3em;
+    margin-bottom: 1.3em;
+
+
+    &__info{
+      display: flex;
+    }
+    .author-photo {
+      width: 20px;
+      height: 20px;
+       background: #B2B3BB;
+       border-radius: 50%;
+       margin-right: .5em;
+
+    }
+    .author {
+     @include OpenSansFont();
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+
+    }
+    .response {
+      display: flex;
+      justify-content: flex-end;
+
+      @include OpenSansFont();
+      font-size: 18px;
+
+      font-weight: 400;
+      line-height: 25px;
+      color: #F05D63;
+      flex-grow: .2;
+      justify-content: space-around;
+    }
+  }
+}
+.schow{
+  opacity: .94 !important;
+}
+.main__menu-window {
+  width: 176px;
+   height: 124px;
+  position: absolute;
+  background-color:#ffff;
+  box-shadow: 0px 24px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  top: 222px;
+  left: 434px;
+  opacity: 0;
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+       .menu-items {
+        @include OpenSansFont();
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 36px;
+        width: 176px;
+        padding-left: 30px;
+
+
+        &:hover{
+          background: #ECF1F8;
+        }
+    }
+  }
+}
+  }
+
+
+
+
+
